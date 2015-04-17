@@ -20,7 +20,7 @@ gulp.task('compass', function(){
 			style: 'expanded'
 		}))
 		.on('error', gutil.log)
-		.pipe(gulp.dest('/'))
+		.pipe(gulp.dest('css/'))
 		.pipe(connect.reload())
 });
 
@@ -42,9 +42,9 @@ gulp.task('connect', function(){
 });
 
 gulp.task('deploy', function () {
-    return gulp.src('./builds/development/**/*')
+    return gulp.src('**/*')
         .pipe(deploy());
 });
 
 
-gulp.task('default', ['html', 'js','compass', 'connect', 'watch']);
+gulp.task('default', ['html', 'js', 'compass', 'connect', 'watch']);
