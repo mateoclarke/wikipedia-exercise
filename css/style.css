@@ -74,7 +74,7 @@ p {
 }
 
 .main-text-box {
-  width: 600px;
+  max-width: 600px;
   height: 300px;
   background: #fff;
   margin: 25% auto;
@@ -82,6 +82,53 @@ p {
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
-.text-box-top {
+.text-box-top, .text-box-bottom {
   float: left;
+  width: 100%;
+}
+
+.text-box-top {
+  margin: 0 0 15px;
+}
+
+.text-box-bottom {
+  background: #ECDFED;
+  min-height: 50px;
+  border-radius: 0px 0px 7px 7px;
+}
+
+.circle-dot {
+  margin: 0 auto;
+  position: relative;
+  height: 10px;
+  width: 10px;
+  background-color: #9F5EA7;
+  border-radius: 10px;
+  top: 5px;
+}
+
+.outer-circle-dot {
+  margin: 0 auto;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: #ECDFED;
+  border-radius: 20px;
+  top: -10px;
+}
+
+.future-dates-group {
+  margin: 0 10%;
+}
+
+.future-date {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+.future-date p {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1em;
 }
