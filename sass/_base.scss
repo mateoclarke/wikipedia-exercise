@@ -2,9 +2,12 @@
 // ==============
 
 html {
+  min-height: 100%;
+}
+
+body {
 	background: $dark-green;
 	background: -webkit-linear-gradient(top, $dark-green, $light-green);
-	min-height: 100%;
 }
 
 p {
@@ -57,7 +60,6 @@ a {
 	position: absolute;
 	max-width: 275px;
 	border-radius: 5px;
-	// padding: 10px;
 	p {
 		color: $white;
 		font-size: 0.7em;

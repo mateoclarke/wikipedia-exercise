@@ -56,9 +56,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 html {
+  min-height: 100%;
+}
+
+body {
   background: #5A702A;
   background: -webkit-linear-gradient(top, #5A702A, #83A33E);
-  min-height: 100%;
 }
 
 p {
@@ -145,9 +148,19 @@ a:visited {
   max-width: 600px;
   height: 300px;
   background: #fff;
-  margin: 25% auto;
-  border-radius: 7px;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  margin: 15% auto;
+}
+@media screen and (max-width: 1250px) {
+  .main-text-box {
+    margin: 25% auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main-text-box {
+    margin: 30% auto;
+  }
 }
 
 .text-box-top, .text-box-bottom {
@@ -157,6 +170,8 @@ a:visited {
 
 .text-box-top {
   margin: 0 0 15px;
+  background: #fff;
+  border-radius: 7px 7px 0px 0px;
 }
 
 .text-box-bottom {
