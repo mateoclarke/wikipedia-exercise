@@ -7,11 +7,12 @@ html {
 
 body {
 	background: $dark-green;
-	background: -webkit-linear-gradient(top, $dark-green, $light-green);
+	font-family: $body-font;
+  @include background-image(radial-gradient(80% 75%, circle, $light-green 0%, $dark-green 100%));
+
 }
 
 p {
-	font-family: $body-font;
 	color: $grey;
 	margin: 20px;
 	line-height: 1.6em;
