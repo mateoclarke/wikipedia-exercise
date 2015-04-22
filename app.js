@@ -1,12 +1,19 @@
 $('.timeline-point').hover(function(){
-	var fact = $(this).attr('data-tooltip');
-	var circle = $(this).find('.outer-circle-dot');
-	var offset = circle.offset();
+
+	var $this = $(this);
+	var fact = $this.attr('data-tooltip');
+	var circleOffset = $this.find('.outer-circle-dot').offset();
 	
-	$('<div class="tooltip"><p>'+fact+'</p><div class="tooltip-arrow"></div></div>').prependTo($(this));
-	var ttWidth = ($('.tooltip').width()/2) - 12;
-	var ttHeight = $('.tooltip').height() + 15;
-	$('.tooltip').css({top: offset.top - ttHeight, left: offset.left - ttWidth});
+	$('<div class="tooltip"><p>'+fact+'</p><div class="tooltip-arrow"></div></div>').appendTo($('body'));
+
+	var ttWidthCenter = ($('.tooltip').width())/2 - 12;
+	var ttHeightAdjust = $('.tooltip').height() + 15;
+
+	$('.tooltip').css({
+		top: circleOffset.top - ttHeightAdjust, 
+		left: circleOffset.left - ttWidthCenter
+	});
+
 }, function(){
 	$('.tooltip').remove();
 })
