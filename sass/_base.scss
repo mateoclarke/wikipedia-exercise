@@ -58,7 +58,7 @@ a {
 
 .tooltip {
 	position: absolute;
-	max-width: 275px;
+	width: 275px;
 	border-radius: 5px;
 	p {
 		color: $white;
@@ -74,7 +74,6 @@ a {
     position: absolute;
     left: 50%;
     margin-left: -35px;
-    bottom: -16px;
 }
 
 .tooltip, .tooltip-arrow:after {
